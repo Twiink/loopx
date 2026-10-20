@@ -19,10 +19,12 @@ from .progress_observation import (
     _progress_turn_instance_id,
     progress_observation_from_run,
 )
+from .progress_review_policy import (
+    PROGRESS_REVIEW_SIGNALS as EXTERNAL_PROGRESS_REVIEW_SIGNALS,
+)
 
 EXTERNAL_PROGRESS_REVIEW_TRIGGER_KIND = "external_progress_review_drift"
 EXTERNAL_PROGRESS_REVIEW_TRIGGER_SCHEMA_VERSION = "external_progress_review_trigger_v0"
-EXTERNAL_PROGRESS_REVIEW_SIGNALS: tuple[str, ...] = ("noul", "choice")
 EXTERNAL_PROGRESS_REVIEW_FRONTIER_PREFIX = "progress_review:"
 EXTERNAL_PROGRESS_REVIEW_PENDING_REASON = "pending_evaluation"
 # Why a captured transition carries no verdict. None of these is drift and none
